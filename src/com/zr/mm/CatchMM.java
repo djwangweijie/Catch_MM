@@ -35,7 +35,7 @@ public class CatchMM {
 	 */
 	public static void   getUrl(String url,int pageCount,int count) {
 		try {
-			if(count<pageCount){
+			if(count<=pageCount){
 			Document doc = Jsoup.connect(url).get();
 			Elements  els = doc.select("#main > div.area-pagination.archive-pagination > div > a[title=下一页]");
 			
